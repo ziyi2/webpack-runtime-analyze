@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var MyLibrary;
+var myLibrary;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -17,7 +17,7 @@ var MyLibrary;
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   bootstrap: () => (/* binding */ bootstrap),\n/* harmony export */   mount: () => (/* binding */ mount),\n/* harmony export */   unmount: () => (/* binding */ unmount)\n/* harmony export */ });\nasync function bootstrap() {\n  console.log(\"bootstrap\");\n}\n\nasync function mount(props) {\n  console.log(\"mount\", props);\n}\n\nasync function unmount(props) {\n  console.log(\"unmount\", props);\n}\n\n\n//# sourceURL=webpack://MyLibrary/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   bootstrap: () => (/* binding */ bootstrap),\n/* harmony export */   mount: () => (/* binding */ mount),\n/* harmony export */   unmount: () => (/* binding */ unmount),\n/* harmony export */   update: () => (/* binding */ update)\n/* harmony export */ });\n// 注意 single-spa 中需要加载 async 函数\nasync function bootstrap() {\n  console.log(\"bootstrap\");\n}\n\nasync function mount() {\n  console.log(\"mount\");\n}\n\nasync function unmount() {\n  console.log(\"unmount\");\n}\n\nasync function update() {\n  console.log(\"update\");\n}\n\n//# sourceURL=webpack://myLibrary/./src/index.js?");
 
 /***/ })
 
@@ -62,7 +62,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__, __webpack_require__);
-/******/ 	MyLibrary = __webpack_exports__;
+/******/ 	myLibrary = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;

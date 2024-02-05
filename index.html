@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="dist/main.js"></script>
-</body>
+    <script>
+      // 用于验证是否在 window 上暴露了 myLibrary 库属性
+      console.log(window.myLibrary);
+      // 模拟 single-spa 执行 myLibrary 上的生命周期函数
+      window.myLibrary.bootstrap();
+    </script>
+  </body>
 </html>

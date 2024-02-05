@@ -6,8 +6,17 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var myLibrary;
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["myLibrary"] = factory();
+	else
+		root["myLibrary"] = factory();
+})(self, () => {
+return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -62,7 +71,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__, __webpack_require__);
-/******/ 	myLibrary = __webpack_exports__;
 /******/ 	
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});

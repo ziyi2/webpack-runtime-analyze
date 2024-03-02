@@ -13,10 +13,11 @@ module.exports = {
     path: path.resolve(__dirname, "public/dist"), // 输出的文件夹
   },
   plugins: [new BundleAnalyzerPlugin()],
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all',
-  //     name: 'vendors'
-  //   },
-  // },
+  optimization: {
+    // 将复用的代码抽离出来，形成一个单独的 vendors.js 文件
+    splitChunks: {
+      chunks: 'all',
+      name: 'vendors'
+    },
+  },
 };

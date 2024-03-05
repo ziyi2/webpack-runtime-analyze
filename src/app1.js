@@ -1,6 +1,5 @@
 // 1. 定义路由组件.
 // 也可以从其他文件导入
-import About from './about.js'
 const Home = { template: '<div>Home</div>' }
 
 // 2. 定义一些路由
@@ -8,7 +7,9 @@ const Home = { template: '<div>Home</div>' }
 // 我们后面再讨论嵌套路由。
 const routes = [
   { path: '/', component: Home },
-  { path: '/about', component: About },
+  // 详见：https://webpack.docschina.org/api/module-methods 和 https://webpack.docschina.org/guides/code-splitting/#dynamic-imports
+  // 调用 import()，被视为分割点，意思是，被请求的模块和它引用的所有子模块，会分割到一个单独的 chunk 中
+  { path: '/about', component: () => import(/* webpackChunkName: "about" */ './about.js')},
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置

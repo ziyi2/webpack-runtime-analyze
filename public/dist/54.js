@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebpack_runtime_analyze=self.webpackChunkwebpack_runtime_analyze||[]).push([[54],{54:(e,a,t)=>{t.r(a),t.d(a,{default:()=>u});const u={template:"<div>About</div>"}}}]);

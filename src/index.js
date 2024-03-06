@@ -1,16 +1,5 @@
-// 注意 single-spa 中需要加载 async 函数
-export async function bootstrap() {
-  console.log("bootstrap");
-}
-
-export async function mount() {
-  console.log("mount");
-}
-
-export async function unmount() {
-  console.log("unmount");
-}
-
-export async function update() {
-  console.log("update");
-}
+// 使用 import { bootstrap } from './single-spa.js' 引入时只会构建单个 Bundle
+// 这里采用 import('./single-spa.js') 进行动态导入，会自动分离 chunk 文件
+import("./single-spa.js").then((res) => {
+  console.log(res);
+});
